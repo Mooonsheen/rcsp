@@ -1,0 +1,26 @@
+version: "3.9"
+name: "rcsp_project"
+services:
+  postgres:
+    image: postgres:16.2
+    environment:
+      POSTGRES_DB: "rcsp"
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "admin"
+    ports:
+      - "5432:5432"
+
+  nats-streaming:
+    # command:
+    # - nats-streaming
+    container_name: nats-streaming
+    image: nats-streaming
+    ports:
+    - 4222:4222
+    - 8222:8222
+
+  redis:
+    container_name: redis
+    image: redis:7.2
+    ports:
+      - 6379:6379

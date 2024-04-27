@@ -1,0 +1,12 @@
+{
+    "server": {
+        "host": "127.0.0.1",
+        "port": ":8000",
+        "subscribe_subject": "addNewOrder"
+    },
+    "database": {
+        "database": "rcsp",
+        "user": "admin",
+        "password": "admin"
+    }
+}
